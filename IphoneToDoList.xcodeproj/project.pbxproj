@@ -10,11 +10,39 @@
 		0039261C1AA921AA00A1599A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0039261B1AA921AA00A1599A /* main.m */; };
 		0039261F1AA921AA00A1599A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0039261E1AA921AA00A1599A /* AppDelegate.m */; };
 		003926221AA921AA00A1599A /* IphoneToDoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 003926201AA921AA00A1599A /* IphoneToDoList.xcdatamodeld */; };
-		003926251AA921AA00A1599A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 003926241AA921AA00A1599A /* ViewController.m */; };
-		003926281AA921AA00A1599A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003926261AA921AA00A1599A /* Main.storyboard */; };
 		0039262A1AA921AA00A1599A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 003926291AA921AA00A1599A /* Images.xcassets */; };
 		0039262D1AA921AA00A1599A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0039262B1AA921AA00A1599A /* LaunchScreen.xib */; };
 		003926391AA921AA00A1599A /* IphoneToDoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 003926381AA921AA00A1599A /* IphoneToDoListTests.m */; };
+		003926431AA9220000A1599A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003926421AA9220000A1599A /* Main.storyboard */; };
+		003926561AA9223C00A1599A /* ShowTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 003926451AA9223C00A1599A /* ShowTaskViewController.m */; };
+		003926571AA9223C00A1599A /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 003926471AA9223C00A1599A /* TaskViewController.m */; };
+		003926581AA9223C00A1599A /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 003926491AA9223C00A1599A /* SidebarViewController.m */; };
+		003926591AA9223C00A1599A /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0039264B1AA9223C00A1599A /* CustomCell.m */; };
+		0039265A1AA9223C00A1599A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0039264D1AA9223C00A1599A /* MainViewController.m */; };
+		0039265B1AA9223C00A1599A /* ListProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0039264F1AA9223C00A1599A /* ListProjectViewController.m */; };
+		0039265C1AA9223C00A1599A /* ListTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 003926511AA9223C00A1599A /* ListTaskViewController.m */; };
+		0039265D1AA9223C00A1599A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 003926531AA9223C00A1599A /* SWRevealViewController.m */; };
+		0039265E1AA9223C00A1599A /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 003926551AA9223C00A1599A /* ProjectViewController.m */; };
+		003926751AA9247100A1599A /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 003926611AA9247100A1599A /* back.png */; };
+		003926761AA9247100A1599A /* back10.png in Resources */ = {isa = PBXBuildFile; fileRef = 003926621AA9247100A1599A /* back10.png */; };
+		003926771AA9247100A1599A /* Business-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 003926631AA9247100A1599A /* Business-25.png */; };
+		003926781AA9247100A1599A /* Checkbox25.png in Resources */ = {isa = PBXBuildFile; fileRef = 003926641AA9247100A1599A /* Checkbox25.png */; };
+		003926791AA9247100A1599A /* Checklist-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 003926651AA9247100A1599A /* Checklist-25.png */; };
+		0039267A1AA9247100A1599A /* Checkmark-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 003926661AA9247100A1599A /* Checkmark-25.png */; };
+		0039267B1AA9247100A1599A /* Create-New-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 003926671AA9247100A1599A /* Create-New-25.png */; };
+		0039267C1AA9247100A1599A /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 003926681AA9247100A1599A /* cross.png */; };
+		0039267D1AA9247100A1599A /* cross37.png in Resources */ = {isa = PBXBuildFile; fileRef = 003926691AA9247100A1599A /* cross37.png */; };
+		0039267E1AA9247100A1599A /* Date To-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 0039266A1AA9247100A1599A /* Date To-25.png */; };
+		0039267F1AA9247100A1599A /* Edit25.png in Resources */ = {isa = PBXBuildFile; fileRef = 0039266B1AA9247100A1599A /* Edit25.png */; };
+		003926801AA9247100A1599A /* Edit32.png in Resources */ = {isa = PBXBuildFile; fileRef = 0039266C1AA9247100A1599A /* Edit32.png */; };
+		003926811AA9247100A1599A /* Leave-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 0039266D1AA9247100A1599A /* Leave-25.png */; };
+		003926821AA9247100A1599A /* Overtime-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 0039266E1AA9247100A1599A /* Overtime-25.png */; };
+		003926831AA9247100A1599A /* Return-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 0039266F1AA9247100A1599A /* Return-25.png */; };
+		003926841AA9247100A1599A /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 003926701AA9247100A1599A /* reveal-icon.png */; };
+		003926851AA9247100A1599A /* Today-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 003926711AA9247100A1599A /* Today-25.png */; };
+		003926861AA9247100A1599A /* today.png in Resources */ = {isa = PBXBuildFile; fileRef = 003926721AA9247100A1599A /* today.png */; };
+		003926871AA9247100A1599A /* Trash25.png in Resources */ = {isa = PBXBuildFile; fileRef = 003926731AA9247100A1599A /* Trash25.png */; };
+		003926881AA9247100A1599A /* UnCheckbox25.png in Resources */ = {isa = PBXBuildFile; fileRef = 003926741AA9247100A1599A /* UnCheckbox25.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +62,50 @@
 		0039261D1AA921AA00A1599A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0039261E1AA921AA00A1599A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		003926211AA921AA00A1599A /* IphoneToDoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IphoneToDoList.xcdatamodel; sourceTree = "<group>"; };
-		003926231AA921AA00A1599A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		003926241AA921AA00A1599A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		003926271AA921AA00A1599A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		003926291AA921AA00A1599A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0039262C1AA921AA00A1599A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		003926321AA921AA00A1599A /* IphoneToDoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IphoneToDoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		003926371AA921AA00A1599A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		003926381AA921AA00A1599A /* IphoneToDoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IphoneToDoListTests.m; sourceTree = "<group>"; };
+		003926421AA9220000A1599A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		003926441AA9223C00A1599A /* ShowTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowTaskViewController.h; sourceTree = "<group>"; };
+		003926451AA9223C00A1599A /* ShowTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowTaskViewController.m; sourceTree = "<group>"; };
+		003926461AA9223C00A1599A /* TaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskViewController.h; sourceTree = "<group>"; };
+		003926471AA9223C00A1599A /* TaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskViewController.m; sourceTree = "<group>"; };
+		003926481AA9223C00A1599A /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
+		003926491AA9223C00A1599A /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
+		0039264A1AA9223C00A1599A /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		0039264B1AA9223C00A1599A /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		0039264C1AA9223C00A1599A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		0039264D1AA9223C00A1599A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		0039264E1AA9223C00A1599A /* ListProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListProjectViewController.h; sourceTree = "<group>"; };
+		0039264F1AA9223C00A1599A /* ListProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListProjectViewController.m; sourceTree = "<group>"; };
+		003926501AA9223C00A1599A /* ListTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTaskViewController.h; sourceTree = "<group>"; };
+		003926511AA9223C00A1599A /* ListTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTaskViewController.m; sourceTree = "<group>"; };
+		003926521AA9223C00A1599A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		003926531AA9223C00A1599A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		003926541AA9223C00A1599A /* ProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewController.h; sourceTree = "<group>"; };
+		003926551AA9223C00A1599A /* ProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectViewController.m; sourceTree = "<group>"; };
+		003926611AA9247100A1599A /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		003926621AA9247100A1599A /* back10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back10.png; sourceTree = "<group>"; };
+		003926631AA9247100A1599A /* Business-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Business-25.png"; sourceTree = "<group>"; };
+		003926641AA9247100A1599A /* Checkbox25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkbox25.png; sourceTree = "<group>"; };
+		003926651AA9247100A1599A /* Checklist-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checklist-25.png"; sourceTree = "<group>"; };
+		003926661AA9247100A1599A /* Checkmark-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checkmark-25.png"; sourceTree = "<group>"; };
+		003926671AA9247100A1599A /* Create-New-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Create-New-25.png"; sourceTree = "<group>"; };
+		003926681AA9247100A1599A /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		003926691AA9247100A1599A /* cross37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross37.png; sourceTree = "<group>"; };
+		0039266A1AA9247100A1599A /* Date To-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Date To-25.png"; sourceTree = "<group>"; };
+		0039266B1AA9247100A1599A /* Edit25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Edit25.png; sourceTree = "<group>"; };
+		0039266C1AA9247100A1599A /* Edit32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Edit32.png; sourceTree = "<group>"; };
+		0039266D1AA9247100A1599A /* Leave-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Leave-25.png"; sourceTree = "<group>"; };
+		0039266E1AA9247100A1599A /* Overtime-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overtime-25.png"; sourceTree = "<group>"; };
+		0039266F1AA9247100A1599A /* Return-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Return-25.png"; sourceTree = "<group>"; };
+		003926701AA9247100A1599A /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
+		003926711AA9247100A1599A /* Today-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Today-25.png"; sourceTree = "<group>"; };
+		003926721AA9247100A1599A /* today.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = today.png; sourceTree = "<group>"; };
+		003926731AA9247100A1599A /* Trash25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trash25.png; sourceTree = "<group>"; };
+		003926741AA9247100A1599A /* UnCheckbox25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UnCheckbox25.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +129,7 @@
 		0039260D1AA921AA00A1599A = {
 			isa = PBXGroup;
 			children = (
+				0039265F1AA9244500A1599A /* ressources */,
 				003926181AA921AA00A1599A /* IphoneToDoList */,
 				003926351AA921AA00A1599A /* IphoneToDoListTests */,
 				003926171AA921AA00A1599A /* Products */,
@@ -85,9 +150,25 @@
 			children = (
 				0039261D1AA921AA00A1599A /* AppDelegate.h */,
 				0039261E1AA921AA00A1599A /* AppDelegate.m */,
-				003926231AA921AA00A1599A /* ViewController.h */,
-				003926241AA921AA00A1599A /* ViewController.m */,
-				003926261AA921AA00A1599A /* Main.storyboard */,
+				003926421AA9220000A1599A /* Main.storyboard */,
+				003926441AA9223C00A1599A /* ShowTaskViewController.h */,
+				003926451AA9223C00A1599A /* ShowTaskViewController.m */,
+				003926461AA9223C00A1599A /* TaskViewController.h */,
+				003926471AA9223C00A1599A /* TaskViewController.m */,
+				003926481AA9223C00A1599A /* SidebarViewController.h */,
+				003926491AA9223C00A1599A /* SidebarViewController.m */,
+				0039264A1AA9223C00A1599A /* CustomCell.h */,
+				0039264B1AA9223C00A1599A /* CustomCell.m */,
+				0039264C1AA9223C00A1599A /* MainViewController.h */,
+				0039264D1AA9223C00A1599A /* MainViewController.m */,
+				0039264E1AA9223C00A1599A /* ListProjectViewController.h */,
+				0039264F1AA9223C00A1599A /* ListProjectViewController.m */,
+				003926501AA9223C00A1599A /* ListTaskViewController.h */,
+				003926511AA9223C00A1599A /* ListTaskViewController.m */,
+				003926521AA9223C00A1599A /* SWRevealViewController.h */,
+				003926531AA9223C00A1599A /* SWRevealViewController.m */,
+				003926541AA9223C00A1599A /* ProjectViewController.h */,
+				003926551AA9223C00A1599A /* ProjectViewController.m */,
 				003926291AA921AA00A1599A /* Images.xcassets */,
 				0039262B1AA921AA00A1599A /* LaunchScreen.xib */,
 				003926201AA921AA00A1599A /* IphoneToDoList.xcdatamodeld */,
@@ -120,6 +201,41 @@
 				003926371AA921AA00A1599A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0039265F1AA9244500A1599A /* ressources */ = {
+			isa = PBXGroup;
+			children = (
+				003926601AA9247100A1599A /* images */,
+			);
+			name = ressources;
+			sourceTree = "<group>";
+		};
+		003926601AA9247100A1599A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				003926611AA9247100A1599A /* back.png */,
+				003926621AA9247100A1599A /* back10.png */,
+				003926631AA9247100A1599A /* Business-25.png */,
+				003926641AA9247100A1599A /* Checkbox25.png */,
+				003926651AA9247100A1599A /* Checklist-25.png */,
+				003926661AA9247100A1599A /* Checkmark-25.png */,
+				003926671AA9247100A1599A /* Create-New-25.png */,
+				003926681AA9247100A1599A /* cross.png */,
+				003926691AA9247100A1599A /* cross37.png */,
+				0039266A1AA9247100A1599A /* Date To-25.png */,
+				0039266B1AA9247100A1599A /* Edit25.png */,
+				0039266C1AA9247100A1599A /* Edit32.png */,
+				0039266D1AA9247100A1599A /* Leave-25.png */,
+				0039266E1AA9247100A1599A /* Overtime-25.png */,
+				0039266F1AA9247100A1599A /* Return-25.png */,
+				003926701AA9247100A1599A /* reveal-icon.png */,
+				003926711AA9247100A1599A /* Today-25.png */,
+				003926721AA9247100A1599A /* today.png */,
+				003926731AA9247100A1599A /* Trash25.png */,
+				003926741AA9247100A1599A /* UnCheckbox25.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,9 +318,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				003926281AA921AA00A1599A /* Main.storyboard in Resources */,
+				003926811AA9247100A1599A /* Leave-25.png in Resources */,
+				003926781AA9247100A1599A /* Checkbox25.png in Resources */,
+				003926791AA9247100A1599A /* Checklist-25.png in Resources */,
+				003926841AA9247100A1599A /* reveal-icon.png in Resources */,
+				003926851AA9247100A1599A /* Today-25.png in Resources */,
+				0039267D1AA9247100A1599A /* cross37.png in Resources */,
+				003926821AA9247100A1599A /* Overtime-25.png in Resources */,
+				003926751AA9247100A1599A /* back.png in Resources */,
+				003926861AA9247100A1599A /* today.png in Resources */,
+				003926431AA9220000A1599A /* Main.storyboard in Resources */,
+				003926771AA9247100A1599A /* Business-25.png in Resources */,
+				0039267E1AA9247100A1599A /* Date To-25.png in Resources */,
+				0039267B1AA9247100A1599A /* Create-New-25.png in Resources */,
+				003926831AA9247100A1599A /* Return-25.png in Resources */,
 				0039262D1AA921AA00A1599A /* LaunchScreen.xib in Resources */,
+				0039267A1AA9247100A1599A /* Checkmark-25.png in Resources */,
+				0039267F1AA9247100A1599A /* Edit25.png in Resources */,
+				003926871AA9247100A1599A /* Trash25.png in Resources */,
 				0039262A1AA921AA00A1599A /* Images.xcassets in Resources */,
+				0039267C1AA9247100A1599A /* cross.png in Resources */,
+				003926801AA9247100A1599A /* Edit32.png in Resources */,
+				003926881AA9247100A1599A /* UnCheckbox25.png in Resources */,
+				003926761AA9247100A1599A /* back10.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +360,15 @@
 			files = (
 				0039261F1AA921AA00A1599A /* AppDelegate.m in Sources */,
 				003926221AA921AA00A1599A /* IphoneToDoList.xcdatamodeld in Sources */,
-				003926251AA921AA00A1599A /* ViewController.m in Sources */,
+				003926571AA9223C00A1599A /* TaskViewController.m in Sources */,
+				0039265A1AA9223C00A1599A /* MainViewController.m in Sources */,
+				0039265E1AA9223C00A1599A /* ProjectViewController.m in Sources */,
+				003926581AA9223C00A1599A /* SidebarViewController.m in Sources */,
+				0039265B1AA9223C00A1599A /* ListProjectViewController.m in Sources */,
+				003926591AA9223C00A1599A /* CustomCell.m in Sources */,
+				0039265C1AA9223C00A1599A /* ListTaskViewController.m in Sources */,
+				0039265D1AA9223C00A1599A /* SWRevealViewController.m in Sources */,
+				003926561AA9223C00A1599A /* ShowTaskViewController.m in Sources */,
 				0039261C1AA921AA00A1599A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,14 +392,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		003926261AA921AA00A1599A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				003926271AA921AA00A1599A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0039262B1AA921AA00A1599A /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

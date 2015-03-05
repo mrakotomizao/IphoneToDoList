@@ -1,9 +1,9 @@
 //
 //  AppDelegate.m
-//  IphoneToDoList
+//  ToDoList
 //
-//  Created by Seheno Rakotomizao on 06/03/2015.
-//  Copyright (c) 2015 Moïse Rakotomizao. All rights reserved.
+//  Created by Seheno Rakotomizao on 23/02/2015.
+//  Copyright (c) 2015 Seheno Rakotomizao. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -16,10 +16,25 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    //Instanciation des notification local
+    
+    [self registerForRemoteNotification];
     return YES;
 }
-
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    UIApplicationState state = [application applicationState];
+    if (state == UIApplicationStateActive) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:notification.alertAction
+                                                        message:notification.alertBody
+                                                       delegate:self cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    
+    // Request to reload table view data
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadData" object:self];
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -43,7 +58,17 @@
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }
+- (void)registerForRemoteNotification {
+    UIUserNotificationType types = UIUserNotificationTypeSound | UIUserNotificationTypeBadge | UIUserNotificationTypeAlert;
+    UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:notificationSettings];
+}
 
+#ifdef __IPHONE_8_0
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+    [application registerForRemoteNotifications];
+}
+#endif
 #pragma mark - Core Data stack
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -51,7 +76,7 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (NSURL *)applicationDocumentsDirectory {
-    // The directory the application uses to store the Core Data store file. This code uses a directory named "bullsgates.IphoneToDoList" in the application's documents directory.
+    // The directory the application uses to store the Core Data store file. This code uses a directory named "bullsgates.ToDoList" in the application's documents directory.
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
@@ -74,7 +99,7 @@
     // Create the coordinator and store
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"IphoneToDoList.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"ToDoList.sqlite"];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {

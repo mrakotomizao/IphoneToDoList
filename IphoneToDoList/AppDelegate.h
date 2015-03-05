@@ -1,9 +1,9 @@
 //
 //  AppDelegate.h
-//  IphoneToDoList
+//  ToDoList
 //
-//  Created by Seheno Rakotomizao on 06/03/2015.
-//  Copyright (c) 2015 Moïse Rakotomizao. All rights reserved.
+//  Created by Seheno Rakotomizao on 23/02/2015.
+//  Copyright (c) 2015 Seheno Rakotomizao. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
