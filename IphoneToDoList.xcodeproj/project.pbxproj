@@ -150,7 +150,6 @@
 			children = (
 				0039261D1AA921AA00A1599A /* AppDelegate.h */,
 				0039261E1AA921AA00A1599A /* AppDelegate.m */,
-				003926421AA9220000A1599A /* Main.storyboard */,
 				003926441AA9223C00A1599A /* ShowTaskViewController.h */,
 				003926451AA9223C00A1599A /* ShowTaskViewController.m */,
 				003926461AA9223C00A1599A /* TaskViewController.h */,
@@ -170,6 +169,7 @@
 				003926541AA9223C00A1599A /* ProjectViewController.h */,
 				003926551AA9223C00A1599A /* ProjectViewController.m */,
 				003926291AA921AA00A1599A /* Images.xcassets */,
+				003926421AA9220000A1599A /* Main.storyboard */,
 				0039262B1AA921AA00A1599A /* LaunchScreen.xib */,
 				003926201AA921AA00A1599A /* IphoneToDoList.xcdatamodeld */,
 				003926191AA921AA00A1599A /* Supporting Files */,
@@ -488,6 +488,7 @@
 				INFOPLIST_FILE = IphoneToDoList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -498,6 +499,7 @@
 				INFOPLIST_FILE = IphoneToDoList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -554,6 +556,7 @@
 				0039263E1AA921AA00A1599A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0039263F1AA921AA00A1599A /* Build configuration list for PBXNativeTarget "IphoneToDoListTests" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +565,7 @@
 				003926411AA921AA00A1599A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -114,7 +114,9 @@
 // The data to return for the row and component (column) that's being passed in
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
+    
     return [mesResultat[row] valueForKey:@"title"];
+    
 }
 //Recuperation d'un objet a la ligne selectionner
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {

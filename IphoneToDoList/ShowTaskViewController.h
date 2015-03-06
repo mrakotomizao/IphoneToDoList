@@ -21,4 +21,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *titleField;
 @property (weak, nonatomic) IBOutlet UITextField *dueDate;
 @property (weak, nonatomic) IBOutlet UITextField *purcent;
+@property (nonatomic) NSArray * progression;
 @end

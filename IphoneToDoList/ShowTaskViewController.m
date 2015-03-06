@@ -13,7 +13,9 @@
 
 @end
 
-@implementation ShowTaskViewController
+@implementation ShowTaskViewController{
+    NSString *progvalue;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,7 +34,7 @@
     [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT+1:00"]];
     
     NSString *duedate = [formatter stringFromDate:[_uneTache valueForKey:@"duedate"]];
-    NSArray * progression = @[@"10",@"20",@"30",@"40",@"50",@"60",@"70",@"80",@"90",@"100"];
+    _progression = @[@"10",@"20",@"30",@"40",@"50",@"60",@"70",@"80",@"90",@"100"];
     _dueDate.text = duedate;
     self.tableView.tableFooterView = [UIView new];
 }
@@ -41,7 +43,8 @@
     
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;
-    NSNumber *purcentFromString = [f numberFromString:_purcent.text];
+    NSNumber *purcentFromString = [f numberFromString:progvalue];
+    NSLog(@"%@",progvalue);
 
     [modifyTask setValue:purcentFromString forKey:@"purcent"];
     
@@ -55,6 +58,27 @@
         NSLog(@"%@, %@", error, error.localizedDescription);
     }
 }
+- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+// The number of rows of data
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return [_progression count];
+}
+
+// The data to return for the row and component (column) that's being passed in
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return _progression[row];
+}
+//Recuperation d'un objet a la ligne selectionner
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    progvalue = [_progression objectAtIndex:row];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
