@@ -2,7 +2,7 @@
 //  SidebarViewController.h
 //  SidebarDemo
 //
-//  Created by Simon on 29/6/13.
+//  Created by Moïse Rakotomizao on 29/6/13.
 //
 
 #import <UIKit/UIKit.h>

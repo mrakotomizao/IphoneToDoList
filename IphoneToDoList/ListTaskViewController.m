@@ -2,8 +2,8 @@
 //  ListTaskViewController.m
 //  SidebarDemo
 //
-//  Created by Seheno Rakotomizao on 21/02/2015.
-//  Copyright (c) 2015 Appcoda. All rights reserved.
+//  Created by Moïse Rakotomizao on 21/02/2015.
+//  Copyright (c) 2015 bullsgate. All rights reserved.
 //
 
 #import "ListTaskViewController.h"

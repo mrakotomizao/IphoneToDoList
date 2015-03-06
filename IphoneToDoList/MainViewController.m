@@ -2,8 +2,8 @@
 //  ViewController.m
 //  SidebarDemo
 //
-//  Created by Simon on 28/6/13.
-//  Copyright (c) 2013 Appcoda. All rights reserved.
+//  Created by Moïse Rakotomizao on 28/6/13.
+//  Copyright (c) 2013 Bullsgates. All rights reserved.
 //
 
 #import "MainViewController.h"

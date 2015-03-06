@@ -2,8 +2,8 @@
 //  SidebarViewController.m
 //  SidebarDemo
 //
-//  Created by Simon on 29/6/13.
-//  Copyright (c) 2013 Appcoda. All rights reserved.
+//  Created by Moïse RAKOTOMIZAO on 29/6/13.
+//  Copyright (c) 2013 bullsgates. All rights reserved.
 //
 
 #import "SidebarViewController.h"

@@ -2,8 +2,8 @@
 //  CustomCell.m
 //  ToDoList
 //
-//  Created by Seheno Rakotomizao on 23/02/2015.
-//  Copyright (c) 2015 Seheno Rakotomizao. All rights reserved.
+//  Created by Moïse Rakotomizao on 23/02/2015.
+//  Copyright (c) 2015 Moïse Rakotomizao. All rights reserved.
 //
 
 #import "CustomCell.h"

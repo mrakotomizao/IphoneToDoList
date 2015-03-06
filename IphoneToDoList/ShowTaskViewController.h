@@ -2,8 +2,8 @@
 //  ShowTaskViewController.h
 //  ToDoList
 //
-//  Created by Seheno Rakotomizao on 24/02/2015.
-//  Copyright (c) 2015 Seheno Rakotomizao. All rights reserved.
+//  Created by Moïse Rakotomizao on 24/02/2015.
+//  Copyright (c) 2015 Moïse Rakotomizao. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

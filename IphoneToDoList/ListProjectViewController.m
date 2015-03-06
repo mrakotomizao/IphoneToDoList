@@ -2,8 +2,8 @@
 //  ProjectViewController.h
 //  ToDoList
 //
-//  Created by Seheno Rakotomizao on 21/02/2015.
-//  Copyright (c) 2015 Appcoda. All rights reserved.
+//  Created by Moïse Rakotomizao on 21/02/2015.
+//  Copyright (c) 2015 Bullsgates. All rights reserved.
 //
 
 #import "ListProjectViewController.h"
