@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "backgroundLayer.h"
 @interface ShowTaskViewController : UITableViewController
 {
     AppDelegate *app;
@@ -21,5 +22,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *titleField;
 @property (weak, nonatomic) IBOutlet UITextField *dueDate;
 @property (weak, nonatomic) IBOutlet UITextField *purcent;
+@property (weak, nonatomic) IBOutlet UIPickerView *picker;
 @property (nonatomic) NSArray * progression;
 @end

@@ -29,7 +29,11 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    CAGradientLayer *bgLayer = [backgroundLayer blueGradient];
+    bgLayer.frame = self.tableView.bounds;
+    [self.view.layer insertSublayer:bgLayer atIndex:0];
     [self AllTask];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.title = [_unProjet valueForKey:@"title"];
     
     //NSLog(@"%@",[self AllTask]);
@@ -45,55 +49,17 @@
     NSEntityDescription *allTasks = [NSEntityDescription entityForName:@"Tasks" inManagedObjectContext:context];
     
     NSFetchRequest *request = [NSFetchRequest new];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"project = %@", _unProjet];
-    [request setPredicate:predicate];
+    if(_unProjet!=nil){
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"project = %@", _unProjet];
+        [request setPredicate:predicate];
+    }
     [request setEntity:allTasks];
-    
-    
     
     NSError *error;
     _mesResultat = [context executeFetchRequest:request error:&error];
     if (error) {
         NSLog(@"%@",error.description);
     }
-}
-- (void)organizeToDolist{
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components;
-    
-    //Current Date
-    NSDate *currentDate = [NSDate date];
-    
-    _overdueTasks = nil;
-    _mustdoTasksOrange = nil;
-    _mustdoTasksGreen = nil;
-    _completedTasks = nil;
-    for(NSManagedObject *toDoTask in _mesResultat)
-    {
-        /* COMPLETED */
-        if((NSNumber *)[toDoTask valueForKey:@"purcent"]==[NSNumber numberWithInt: 100]) [_completedTasks addObject:toDoTask];
-        
-        /* UNCOMPLETED */
-        else
-        {
-            NSDate *dueDate = [toDoTask valueForKey:@"duedate"];
-            
-            components = [NSDateComponents new];
-            [components setDay:-1];
-            NSDate *threeDaysBefore = [calendar dateByAddingComponents:components
-                                                                toDate:dueDate
-                                                               options:0];
-            
-            if([dueDate earlierDate:currentDate] == dueDate){
-                [self.overdueTasks addObject:toDoTask];
-            } else if([currentDate laterDate:threeDaysBefore] == currentDate){ // Assumed < Tomorrow
-                [self.mustdoTasksOrange addObject:toDoTask];
-            } else if([currentDate laterDate:threeDaysBefore] == threeDaysBefore){
-                [self.mustdoTasksGreen addObject:toDoTask];
-            }
-        }
-    }
-    
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -114,21 +80,27 @@
     }
     NSManagedObjectContext *unProjet = [_mesResultat objectAtIndex:indexPath.row];
     cell.titleLabel.text = [unProjet valueForKey:@"title"];
+    
+    
     NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
     [outputFormatter setDateFormat:@"dd-MM-yyyy"];
-    
     //NSLOG
     cell.dueDateLabel.text = [outputFormatter stringFromDate:[unProjet valueForKey:@"duedate"]];
     NSNumber *purcent = [unProjet valueForKey:@"purcent"];
     NSString *numberConverted = [NSString stringWithFormat:@"%@%%",purcent];
-    
+    if ([purcent intValue] == 100) {
+        cell.check.image = [UIImage imageNamed:@"Checkbox25.png"];
+    }
     if ([numberConverted length] > 0 && purcent!=nil) {
         cell.purcentLabel.text = numberConverted;
     }else{
         cell.purcentLabel.text = @"0%";
     }
-    
-    
+    if(_unProjet==nil){
+        cell.projectName.text = [[unProjet valueForKey:@"Project"] valueForKey:@"title"];
+    }else{
+        cell.projectName.text = @"";
+    }
     return cell;
 }
 

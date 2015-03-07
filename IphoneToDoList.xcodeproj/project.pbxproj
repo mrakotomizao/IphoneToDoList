@@ -43,6 +43,8 @@
 		003926861AA9247100A1599A /* today.png in Resources */ = {isa = PBXBuildFile; fileRef = 003926721AA9247100A1599A /* today.png */; };
 		003926871AA9247100A1599A /* Trash25.png in Resources */ = {isa = PBXBuildFile; fileRef = 003926731AA9247100A1599A /* Trash25.png */; };
 		003926881AA9247100A1599A /* UnCheckbox25.png in Resources */ = {isa = PBXBuildFile; fileRef = 003926741AA9247100A1599A /* UnCheckbox25.png */; };
+		003926C61AABA7F600A1599A /* backgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 003926C51AABA7F600A1599A /* backgroundLayer.m */; };
+		003926C81AABBF1400A1599A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003926C71AABBF1400A1599A /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,9 @@
 		003926721AA9247100A1599A /* today.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = today.png; sourceTree = "<group>"; };
 		003926731AA9247100A1599A /* Trash25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Trash25.png; sourceTree = "<group>"; };
 		003926741AA9247100A1599A /* UnCheckbox25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UnCheckbox25.png; sourceTree = "<group>"; };
+		003926C41AABA7F600A1599A /* backgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backgroundLayer.h; sourceTree = "<group>"; };
+		003926C51AABA7F600A1599A /* backgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = backgroundLayer.m; sourceTree = "<group>"; };
+		003926C71AABBF1400A1599A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				003926C81AABBF1400A1599A /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +135,7 @@
 		0039260D1AA921AA00A1599A = {
 			isa = PBXGroup;
 			children = (
+				003926C71AABBF1400A1599A /* CoreGraphics.framework */,
 				0039265F1AA9244500A1599A /* ressources */,
 				003926181AA921AA00A1599A /* IphoneToDoList */,
 				003926351AA921AA00A1599A /* IphoneToDoListTests */,
@@ -150,24 +157,18 @@
 			children = (
 				0039261D1AA921AA00A1599A /* AppDelegate.h */,
 				0039261E1AA921AA00A1599A /* AppDelegate.m */,
-				003926441AA9223C00A1599A /* ShowTaskViewController.h */,
-				003926451AA9223C00A1599A /* ShowTaskViewController.m */,
-				003926461AA9223C00A1599A /* TaskViewController.h */,
-				003926471AA9223C00A1599A /* TaskViewController.m */,
-				003926481AA9223C00A1599A /* SidebarViewController.h */,
-				003926491AA9223C00A1599A /* SidebarViewController.m */,
-				0039264A1AA9223C00A1599A /* CustomCell.h */,
-				0039264B1AA9223C00A1599A /* CustomCell.m */,
 				0039264C1AA9223C00A1599A /* MainViewController.h */,
 				0039264D1AA9223C00A1599A /* MainViewController.m */,
-				0039264E1AA9223C00A1599A /* ListProjectViewController.h */,
-				0039264F1AA9223C00A1599A /* ListProjectViewController.m */,
-				003926501AA9223C00A1599A /* ListTaskViewController.h */,
-				003926511AA9223C00A1599A /* ListTaskViewController.m */,
-				003926521AA9223C00A1599A /* SWRevealViewController.h */,
-				003926531AA9223C00A1599A /* SWRevealViewController.m */,
-				003926541AA9223C00A1599A /* ProjectViewController.h */,
-				003926551AA9223C00A1599A /* ProjectViewController.m */,
+				0039264A1AA9223C00A1599A /* CustomCell.h */,
+				0039264B1AA9223C00A1599A /* CustomCell.m */,
+				003926C41AABA7F600A1599A /* backgroundLayer.h */,
+				003926C51AABA7F600A1599A /* backgroundLayer.m */,
+				003926BE1AAA157600A1599A /* ModificationTask */,
+				003926BF1AAA15AF00A1599A /* CreateTask */,
+				003926C01AAA15CF00A1599A /* Sidebar */,
+				003926C11AAA160D00A1599A /* ProjectList */,
+				003926C21AAA162800A1599A /* TaskList */,
+				003926C31AAA164E00A1599A /* CreateProject */,
 				003926291AA921AA00A1599A /* Images.xcassets */,
 				003926421AA9220000A1599A /* Main.storyboard */,
 				0039262B1AA921AA00A1599A /* LaunchScreen.xib */,
@@ -236,6 +237,62 @@
 				003926741AA9247100A1599A /* UnCheckbox25.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		003926BE1AAA157600A1599A /* ModificationTask */ = {
+			isa = PBXGroup;
+			children = (
+				003926441AA9223C00A1599A /* ShowTaskViewController.h */,
+				003926451AA9223C00A1599A /* ShowTaskViewController.m */,
+			);
+			name = ModificationTask;
+			sourceTree = "<group>";
+		};
+		003926BF1AAA15AF00A1599A /* CreateTask */ = {
+			isa = PBXGroup;
+			children = (
+				003926461AA9223C00A1599A /* TaskViewController.h */,
+				003926471AA9223C00A1599A /* TaskViewController.m */,
+			);
+			name = CreateTask;
+			sourceTree = "<group>";
+		};
+		003926C01AAA15CF00A1599A /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				003926521AA9223C00A1599A /* SWRevealViewController.h */,
+				003926531AA9223C00A1599A /* SWRevealViewController.m */,
+				003926481AA9223C00A1599A /* SidebarViewController.h */,
+				003926491AA9223C00A1599A /* SidebarViewController.m */,
+			);
+			name = Sidebar;
+			sourceTree = "<group>";
+		};
+		003926C11AAA160D00A1599A /* ProjectList */ = {
+			isa = PBXGroup;
+			children = (
+				0039264E1AA9223C00A1599A /* ListProjectViewController.h */,
+				0039264F1AA9223C00A1599A /* ListProjectViewController.m */,
+			);
+			name = ProjectList;
+			sourceTree = "<group>";
+		};
+		003926C21AAA162800A1599A /* TaskList */ = {
+			isa = PBXGroup;
+			children = (
+				003926501AA9223C00A1599A /* ListTaskViewController.h */,
+				003926511AA9223C00A1599A /* ListTaskViewController.m */,
+			);
+			name = TaskList;
+			sourceTree = "<group>";
+		};
+		003926C31AAA164E00A1599A /* CreateProject */ = {
+			isa = PBXGroup;
+			children = (
+				003926541AA9223C00A1599A /* ProjectViewController.h */,
+				003926551AA9223C00A1599A /* ProjectViewController.m */,
+			);
+			name = CreateProject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +417,7 @@
 			files = (
 				0039261F1AA921AA00A1599A /* AppDelegate.m in Sources */,
 				003926221AA921AA00A1599A /* IphoneToDoList.xcdatamodeld in Sources */,
+				003926C61AABA7F600A1599A /* backgroundLayer.m in Sources */,
 				003926571AA9223C00A1599A /* TaskViewController.m in Sources */,
 				0039265A1AA9223C00A1599A /* MainViewController.m in Sources */,
 				0039265E1AA9223C00A1599A /* ProjectViewController.m in Sources */,

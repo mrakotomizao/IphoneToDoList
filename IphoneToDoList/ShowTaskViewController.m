@@ -27,6 +27,9 @@
     if ([_uneTache valueForKey:@"purcent"]) {
         _purcent.text = [[_uneTache valueForKey:@"purcent"] stringValue];
     }
+    CAGradientLayer *bgLayer = [backgroundLayer blueGradient];
+    bgLayer.frame = self.tableView.bounds;
+    [self.view.layer insertSublayer:bgLayer atIndex:0];
     //conversion d'une date en string
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-MM-dd"];
@@ -34,9 +37,12 @@
     [formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT+1:00"]];
     
     NSString *duedate = [formatter stringFromDate:[_uneTache valueForKey:@"duedate"]];
-    _progression = @[@"10",@"20",@"30",@"40",@"50",@"60",@"70",@"80",@"90",@"100"];
+    _progression = @[@"0",@"10",@"20",@"30",@"40",@"50",@"60",@"70",@"80",@"90",@"100"];
     _dueDate.text = duedate;
     self.tableView.tableFooterView = [UIView new];
+    
+    [self.picker selectRow:0 inComponent:0 animated:YES];
+
 }
 -(void)UpdateTask{
     NSManagedObject* modifyTask = (NSManagedObject *)_uneTache;

@@ -10,8 +10,11 @@
 #import "AppDelegate.h"
 #import "SWRevealViewController.h"
 #import "ListTaskViewController.h"
+#import "backgroundLayer.h"
+#import "CustomCell.h"
 
-@interface ListProjectViewController : UIViewController
+
+@interface ListProjectViewController : UITableViewController
 {
     AppDelegate *app;
     NSManagedObjectContext *context;
@@ -19,7 +22,6 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (nonatomic)NSArray *menuItems;
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 
 @end

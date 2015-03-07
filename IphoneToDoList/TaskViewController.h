@@ -21,5 +21,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *titleField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *duedate;
+@property (strong, nonatomic) IBOutlet UITableView *tableview;
 
 @end

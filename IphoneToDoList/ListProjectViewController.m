@@ -28,6 +28,10 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    CAGradientLayer *bgLayer = [backgroundLayer blueGradient];
+    bgLayer.frame = self.view.bounds;
+    [self.view.layer insertSublayer:bgLayer atIndex:0];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.title = @"Liste des projets";
     [self setLocalBadgeNotification];
 }
@@ -94,7 +98,7 @@
     }
     NSManagedObjectContext *unProjet = [[self AllProject] objectAtIndex:indexPath.row];
     cell.textLabel.text = [unProjet valueForKey:@"title"];
-    
+    cell.backgroundColor = [UIColor colorWithRed:0 green:0.4 blue:0.8 alpha:0.5];
     return cell;
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

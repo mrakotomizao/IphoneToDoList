@@ -8,6 +8,7 @@
 
 #import "TaskViewController.h"
 #import "ListProjectViewController.h"
+#import "backgroundLayer.h"
 
 @interface TaskViewController ()
 
@@ -22,8 +23,11 @@
         app = [[UIApplication sharedApplication] delegate];
         context = [app managedObjectContext];
     }
-    NSEntityDescription *entityProject = [NSEntityDescription entityForName:@"Projects" inManagedObjectContext:context];
+    CAGradientLayer *bgLayer = [backgroundLayer blueGradient];
+    bgLayer.frame = self.tableview.bounds;
+    [self.view.layer insertSublayer:bgLayer atIndex:0];
     
+    NSEntityDescription *entityProject = [NSEntityDescription entityForName:@"Projects" inManagedObjectContext:context];
     
     NSFetchRequest *request = [NSFetchRequest new];
     [request setEntity:entityProject];
@@ -67,15 +71,17 @@
             NSLog(@"Unable to save managed object context.");
             NSLog(@"%@, %@", error, error.localizedDescription);
         }
-    // Get the current date
+
     NSDate *pickerDate = _duedate.date;
-    int daysToAdd = -1;
-    NSDate *duedate = [pickerDate dateByAddingTimeInterval:60*60*24*daysToAdd];
+    // ADD THOSE LINE TO ADD CUSTOM REMINDER---------------
+//    int daysToAdd = -1;
+//    NSDate *duedate = [pickerDate dateByAddingTimeInterval:60*60*24*daysToAdd];
+    //-----------------------------------------------------
     
     // Schedule the notification
     UILocalNotification* localNotification = [[UILocalNotification alloc] init];
     
-    localNotification.fireDate = duedate;
+    localNotification.fireDate = pickerDate;
     //localNotification.repeatInterval = 60;
     localNotification.alertBody = [NSString stringWithFormat:@"Date limite à : %@",_duedate.date ];
     NSString *titleAlert = [NSString stringWithFormat:@"Task ToDo : %@",_titleField.text ];
@@ -85,8 +91,6 @@
     
     // Request to reload table view data
     [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadData" object:self];
-    NSLog(@"%@",localNotification.fireDate);
-    //NSLog(@"%@",pickerDate);
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -134,7 +138,6 @@
             [self.navigationController popViewControllerAnimated:YES];
             return YES;
         }else{
-            
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Empty field"
                                                             message:@"You must fill in the Title"
                                                            delegate:nil

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "backgroundLayer.h"
 
 @interface ProjectViewController : UITableViewController{
     AppDelegate *app;

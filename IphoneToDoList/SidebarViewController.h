@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "backgroundLayer.h"
 
 @interface SidebarViewController : UITableViewController
 

@@ -29,6 +29,9 @@
     [super viewDidLoad];
     _menuItems = @[@"title",@"projects", @"tasks",@"Subtitle", @"CreateProject", @"CreateTask"];
     self.tableView.tableFooterView = [UIView new];
+    CAGradientLayer *bgLayer = [backgroundLayer blueGradient];
+    bgLayer.frame = self.tableView.bounds;
+    [self.view.layer insertSublayer:bgLayer atIndex:0];
 }
 
 - (void)didReceiveMemoryWarning

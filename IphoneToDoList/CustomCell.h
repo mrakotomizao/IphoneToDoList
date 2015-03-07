@@ -14,5 +14,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *dueDateLabel;
 @property (nonatomic, weak) IBOutlet UIImageView *check;
 @property (weak, nonatomic) IBOutlet UILabel *purcentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *projectName;
 
 @end

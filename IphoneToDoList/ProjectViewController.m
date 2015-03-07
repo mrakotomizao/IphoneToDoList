@@ -21,7 +21,10 @@
     app = [[UIApplication sharedApplication] delegate];
     context = [app managedObjectContext];
     self.navigationItem.hidesBackButton = YES;
-    self.tableView.tableFooterView = [UIView new];    
+    self.tableView.tableFooterView = [UIView new];
+    CAGradientLayer *bgLayer = [backgroundLayer blueGradient];
+    bgLayer.frame = self.tableView.bounds;
+    [self.view.layer insertSublayer:bgLayer atIndex:0];
 }
 
 - (void)didReceiveMemoryWarning {
